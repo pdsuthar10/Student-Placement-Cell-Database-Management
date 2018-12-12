@@ -1,0 +1,529 @@
+BRACNHES_FOR_OFFER
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('1','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('1','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('2','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('2','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('3','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('3','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('4','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('5','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('6','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('7','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('7','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('7','Msc. IT');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('8','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('8','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('8','Msc. IT');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('9','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('9','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('9','Msc. IT');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('10','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('10','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('10','Msc. IT');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('11','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('12','Msc. IT');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('13','M. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('13','B. Tech');
+INSERT INTO branches_for_offer(offer_id,stream_name) VALUES ('14','B. Tech');
+
+
+
+
+
+
+
+CATEGORY
+INSERT INTO category VALUES ('A');
+INSERT INTO category VALUES ('B');
+INSERT INTO category VALUES ('Dream');
+
+
+
+
+COMPANY_LOCATIONS
+INSERT INTO company_locations(company_name,location_name) VALUES ('Amazon','Chennai');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Amazon','Banglore');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Amazon','Hyderabad');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Amazon','Gurgoan');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Deloitte','Mumbai');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Deloitte','Banglore');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Directi','Mumbai');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Directi','Pune');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Endurance International','Pune');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Evive Health','Ahmedabad');
+INSERT INTO company_locations(company_name,location_name) VALUES ('FactSet','Gurgoan');
+INSERT INTO company_locations(company_name,location_name) VALUES ('FactSet','Mumbai');
+INSERT INTO company_locations(company_name,location_name) VALUES ('Futures First','Ahmedabad');
+
+
+
+
+
+COMPANY
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Amazon','A','Scale swiftly and reach even more customers with Fulfillment by Amazon, our world-class fulfillment service. We pick, pack, and ship your products and take care of customer service and returns�all so you can focus on growing your business. Increase your reach and drive sales by advertising your products on Amazon.','11/6/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Deloitte','B','Professionals in the US India Consulting�technology practice offer both advisory and implementation services that provide clients with comprehensive solutions to help them better manage the critical business of information technology. 
+We accomplish this','7/6/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Directi','Dream','You are acquainted with / have mastered a few of the below skills/tools:
+
+Java, C#, PHP, Ruby, Python, C++, JavaScript, WPF, Erlang, Haskell, LISP, Linux, Flex, XUL, Bash, Advanced Networking, Async IO, Routing, TCP/UDP, Postgres, Data structures, Advance','1/6/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Endurance International','A','In the last 3 decades, the automobile industry has undergone a huge technological transformation and it has been our endeavor to constantly develop products, that meet the discerning demands of the constantly evolving market. And we are driven by our goal to be present in every automobile in the world.','6/20/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Evive Health','B','Bug Finder, Programmer, Business Analyst, Application detective, System programmer, web programmer, data analyst','6/25/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('FactSet','A','Position Name: Software Engineer
+Process Name: Content Integration Engineer
+Sub-Process Name: Machine Learning and Language Technology.
+About FACTSET
+FactSet combines hundreds of databases into a single powerful information system. It is one-stop source','1/7/2016');
+INSERT INTO company(name,category_type,details,visit_date) VALUES ('Futures First','A','Futures first offers a unique opportunity in India to work in the world''s most exotic, liquid, and well-developed derivatives markets. This is an exciting challenge and an excellent opportunity for bright, analytical, highly motivated graduates to join a','8/7/2016');
+
+
+
+
+
+
+
+
+
+
+INTEREST
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201201208','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201201208','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301001','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301001','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301002','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301002','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301003','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301003','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301005','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301005','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301005','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301006','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301006','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301006','CT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301006','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301007','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301008','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301008','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301009','CT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301009','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301009','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201301009','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511001','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511001','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511001','CT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511001','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511002','Meet Nitin Desai');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511002','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511002','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511003','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511003','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511004','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511004','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511004','CT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511004','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511005','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511005','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201511005','EL');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512001','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512001','CT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512001','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512002','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512002','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512003','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512003','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512004','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512004','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512005','IT');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512005','Consultancy');
+INSERT INTO interest(student_id,domain_of_interest) VALUES ('201512005','CT');
+
+
+
+
+
+
+
+
+
+
+
+LOCATIONS
+INSERT INTO location VALUES ('Pune');
+INSERT INTO location VALUES ('Ahmedabad');
+INSERT INTO location VALUES ('Banglore');
+INSERT INTO location VALUES ('Mumbai');
+INSERT INTO location VALUES ('Gurgoan');
+INSERT INTO location VALUES ('Chennai');
+INSERT INTO location VALUES ('Hyderabad');
+
+
+
+
+OFFER_LOCATIONS
+INSERT INTO offer_locations(offer_id,location_name) VALUES (1,'Gurgoan');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (1,'Chennai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (2,'Banglore');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (2,'Hyderabad');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (3,'Banglore');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (3,'Hyderabad');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (4,'Banglore');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (5,'Mumbai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (6,'Mumbai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (7,'Mumbai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (8,'Mumbai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (9,'Pune');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (10,'Pune');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (11,'Pune');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (12,'Ahmedabad');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (13,'Gurgoan');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (13,'Mumbai');
+INSERT INTO offer_locations(offer_id,location_name) VALUES (14,'Ahmedabad');
+
+
+
+
+
+
+
+
+REGISTERS_FOR
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,5,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,6,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201201208,14,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301001,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301001,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301001,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301002,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301002,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301002,5,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301002,6,'FALSE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301002,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301003,3,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,5,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,6,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301005,14,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301006,4,'FALSE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301006,7,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,5,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,6,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301007,9,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,2,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,3,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,5,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,6,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301008,14,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201301009,3,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511001,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511001,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511001,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511001,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511001,13,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511002,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511002,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511003,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511003,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511003,7,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511004,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511004,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511004,13,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511005,2,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511005,3,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511005,7,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511005,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201511005,13,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512001,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512001,12,'TRUE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512002,11,'FALSE','TRUE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512003,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512003,12,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512004,9,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512004,12,'FALSE','FALSE');
+INSERT INTO registers_for(student_id,offer_id,accepted_offer,selected_offer) VALUES (201512005,9,'TRUE','TRUE');
+
+
+
+
+
+
+
+
+
+ROUND
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,5,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,5,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,6,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,6,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,14,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201201208,14,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301001,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301001,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301001,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,2,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,2,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,2,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,3,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,3,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,5,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,5,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,5,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,5,4,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,6,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,6,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,6,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,6,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301002,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301003,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,2,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,5,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,5,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,6,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,6,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,14,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,14,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301005,14,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,4,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,7,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,7,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,7,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,7,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301006,7,5,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,2,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,2,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,3,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,5,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,5,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,6,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,6,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,9,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,9,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,9,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301007,9,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,2,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,2,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,2,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,2,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,3,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,3,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,3,4,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,5,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,5,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,6,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,6,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,14,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301008,14,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301009,3,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301009,3,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301009,3,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201301009,3,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,7,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,7,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,13,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,13,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,13,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511002,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511002,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,7,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,7,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,7,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511003,7,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511001,7,5,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,13,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,13,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,13,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511004,13,4,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,2,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,3,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,7,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,13,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,13,2,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,13,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201511005,13,4,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512001,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512001,12,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512001,12,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512001,12,3,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512002,11,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512003,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512003,12,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512004,9,1,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512004,12,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512004,12,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512004,12,3,'FALSE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512005,9,1,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512005,9,2,'TRUE');
+INSERT INTO round(student_id,offer_id,round_type,selected_for_round) VALUES (201512005,9,3,'TRUE');
+
+
+
+
+
+
+
+
+
+
+
+SPI
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,1,7.08);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,2,6.58);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,3,5.08);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,4,5.58);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,5,7.04);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201201208,6,5.62);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,1,7.23);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,2,6.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,3,5.34);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,4,5.7);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,5,5.8);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301001,6,5.97);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,1,7.6);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,2,8.3);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,3,6.02);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,4,6.4);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,5,6.8);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301002,6,6.4);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,1,8.6);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,2,8.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,3,7.92);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,4,7.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,5,8.3);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301003,6,7.8);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,1,8.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,2,8.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,3,8.3);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,4,7.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,5,7.89);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301005,6,8.02);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,1,8.87);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,2,7.8);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,3,8.02);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,4,7.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,5,8.3);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301006,6,7.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,1,8.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,2,8.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,3,7.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,4,8.04);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,5,8.23);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301007,6,7.89);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,1,8.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,2,7.89);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,3,6.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,4,7.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,5,7.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301008,6,7.34);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,1,7.02);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,2,6.21);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,3,6.03);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,4,5.58);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,5,7.07);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201301009,6,6.04);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511001,1,8.03);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511001,2,7.23);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511002,1,9.78);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511002,2,9.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511003,1,8.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511003,2,8.04);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511004,1,9.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511004,2,9.8);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511005,1,9.51);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201511005,2,9.61);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512001,1,9.02);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512001,2,9.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512002,1,7.67);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512002,2,7.56);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512003,1,8.45);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512003,2,8.03);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512004,1,8.23);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512004,2,8.1);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512005,1,9.78);
+INSERT INTO student_spi(student_id,semester,spi) VALUES (201512005,2,9.57);
+
+
+
+
+
+
+
+
+
+
+STREAM
+INSERT INTO stream VALUES ('B. Tech');
+INSERT INTO stream VALUES ('M. Tech');
+INSERT INTO stream VALUES ('Msc. IT');
+
+
+
+STUDENT
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201201208','8/22/1994','Shaunak Manoj Shah','Daksha','Manoj','76.92','93.69','6.08','0','1','9909074548','HOR men, DAIICT,','201, sakar-1, 32 purshottam nagar, akota,','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301001','9/26/1995','Simlai Samriddhi Shibaji','Meghna Simlai','Shibaji Simlai','79.4','91.4','5.74','0','0','9913513196','DAIICT, Near Infocity,','1, Hermitage Villa,','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301002','4/10/1995','Himanshu Baldev Bhai Patel','BHAGWATI BEN B PATEL','BALDEV BHAI M PATEL','87.4','81.7','6.76','0','0','9328819345','110 Indralok Society ,near GST Crossing ,New Ranip ,Ahmedabad,near GST Crossing ,New Ranip','110 Indralok Society ,near GST Crossing ,New Ranip ,Ahmedabad,near GST Crossing ,New Ranip','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301003','5/28/1995','Barkha Alkesh Bhojak','Reshma','Alkesh','96','93','8.15','0','0','9998515232','K-214,','D-801,Viceroy Ville','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301005','12/17/1995','Prerak Nandish Dholakiya','Alpa Dholakiya','Nandish Dholakiya','89.8','95','8.36','0','0','9227631074','A-110,HoR Men,DA-IICT,,Near Indroda Circle,','"SHREEJI KRUPA",B-11,Gunatit Nagar Gate 2,Opp. Agriculture campus','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301006','6/4/1996','Bhagyesh Rajnikant Vikani','Ramaben','Rajnikant','88.6','88','8.12','0','0','9904417047','A-102, HOR-MEN, DAIICT campus,N/R Indroda Circle','"Vallabhashray", 3 Ruda nagar, Plot no. 143,,N/R Iscon Temple, Kalawad Road','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301007','12/27/1995','Saurabh Rajeshkumar Panchal','Dipika Panchal','Rajesh Panchal','88.6','95.4','8.45','0','0','9662965277','8/87,Rameshwar Apartment,Near Vinayak Petrol Pump,Solaroad,Naranpura','8/87,Rameshwar Apartment,Near Vinayak Petrol Pump,Solaroad,Naranpura','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301008','5/5/1996','Yash Sureshbhai Patel','Shobhanaben Patel','Sureshbhai Patel','83','90.4','7.51','0','0','7567512649','D-316, HOR-MAN,DAIICT,Near Infocity','103,rusat nagar,,visnagar road','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201301009','8/30/1996','Vivekkumar Kantilal Kalola','Kalola Jayaben','Kalola kantilal','84.2','80.4','6.31','0','1','8154096952','C215 HOR Men,DA-IICT','"Vivek" Vandnapark Society,Near galiyawad road, Talala','0','B. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201511001','7/11/1992','Niravkumar Sureshbhai Pedhadiya','Kantaben','Sureshbhai','84.2','84.46','7.59','0','0','9724799733','C-203, Krishnakunj app.,near Canara Bank, Kudasan','At. : kharwa,Taluka : Wadhwan','72.79','M. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201511002','12/10/1993','Meet Nitin Desai','Hina','Nitin','88.2','89.38','9.67','0','0','7405483287','8/A Kalabaug Society,Jawharchowk Maningar','8/A Kalabaug Society,Jawaharchowk Maninagar','72.6','M. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201511003','8/22/1992','Vismay Navinkumar Patel','Geetaben Navinkumar Patel','Navinkumar Haribhai Patel','89','87.23','8.31','0','0','9925038170','D-8 Navjyot Complex, Near A-ONE School,,Subhashchowk, Memnagar','D-8 Navjyot Complex, Near A-ONE School,,Subhashchowk, Memnagar','77','M. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201511004','6/3/1993','Ayushi Ramprakash Sharma','Seema Sharma','Ramprakash Sharma','88.29','90','9.56','0','0','7417848511','K-306, HOR-Women, DA-IICT,Gandhinagar-Ahmedabad Road, Near Indroda Circle,','D-3, H.C.C. Colony,,Post Masma, Olpad','79','M. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201511005','1/30/1993','Akash Pravinchandra Shah','Malti P Shah','Pravinchandra H Shah','92.2','95.08','9.56','0','0','9428801002','36, Kadva Patidar Society,Ghatlodia','36, Kadva Patidar Society,Ghatlodia','84.1','M. Tech');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201512001','8/25/1993','Kapil Dinesh Khedkar','Anjali Khedkar','Dinesh Khedkar','74','83.16','9.31','0','0','9722016000','9, Rajendra Society,Manjalpur Naka','9, Rajendra Society,Manjalpur Naka','81.1','Msc. IT');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201512002','11/29/1994','Priyanka Mohan Raut','Manisha','Mohan','80.71','84.46','7.6','0','0','9408080936','7,Ambica Kunj Society,,Waghodia Road,','7,Ambica Kunj Society,,Waghodia Road,','84.5','Msc. IT');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201512003','3/2/1994','Rutul Mangeshbhai Thakkar','Geetaben M. Thakkar','Mangeshkumar N. Thakkar','66.16','62.77','8.29','0','0','7567292905','Casa Sola, opposite Shaligram II, Near Sindhu Bhavan, Thaltej,','Casa Sola, opposite Shaligram II, Near Sindhu Bhavan, Thaltej,','97.15','Msc. IT');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201512004','12/8/1994','Sagar Mukeshbhai Shah','monaben shah','mukeshbhai shah','79.14','75.38','8.21','0','0','9426160952','plot no 405/1,sector 3/B,','bhav sagar,3-pujara plot,,near bhaktinagar circle,','82.24','Msc. IT');
+INSERT INTO student(student_id,dob,full_name,mother_name,father_name,hsc,ssc,cpi,current_backlog,total_backlog,mobile_number,current_address,permanent_address,graduation_percentage,stream_name) VALUES ('201512005','5/4/1994','Sunil Suresh Chawla','Lavina Chawla','Suresh Chawla','63.65','85.5','9.6','0','0','8980526776','10, Krishna Colony,Nr. Praful Society, Eshita Towers Road, Navrangpura','10, Krishna Colony,Nr. Praful Society, Eshita Towers Road, Navrangpura','98.95','Msc. IT');
+
+
+
+
+
+
+
+
+JOB_TYPE
+INSERT INTO job_type VALUES ('I(2)');
+INSERT INTO job_type VALUES ('I(6)');
+INSERT INTO job_type VALUES ('I + J');
+INSERT INTO job_type VALUES ('J');
+
+
+
+
+
+
+
+

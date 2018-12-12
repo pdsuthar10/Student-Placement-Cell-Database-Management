@@ -1,0 +1,14 @@
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (1,'Amazon','I(2)','False',1,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (2,'Amazon','I(6)','False',3,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (3,'Amazon','I + J','False',27.5,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (4,'Amazon','J','True',27.5,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (5,'Deloitte','I(2)','False',2.3,'False',6);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (6,'Deloitte','I + J','False',6.3,'False',6);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (7,'Directi','I + J','False',29,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (8,'Directi','I(2)','False',1.8,'False',0);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (9,'Endurance International','I + J','False',14,'False',7);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (10,'Endurance International','I(2)','False',0.8,'False',7);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (11,'Endurance International','J','True',14,'False',7);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (12,'Evive Health','J','False',7,'False',6);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (13,'FactSet','J','False',10,'False',6);
+INSERT INTO offer(offer_id,company_name,job_profile,ppo,ctc,bond,cpi_criteria) VALUES (14,'Futures First','I(6)','False',11,'True',6);

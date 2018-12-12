@@ -1,0 +1,335 @@
+
+
+1-->'Accepted offer cannot be true if selected offer is false'
+	create or replace function selectedAcceptedTrig() returns trigger as $xyz$
+	begin
+
+		if(NEW.selected_offer = false  AND NEW.accepted_offer = true) THEN
+			raise exception 'Accepted offer cannot be true if selected offer is false';
+			return null;
+		end if;
+		return NEW;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger selectedAcceptedTrig before insert or update on registers_for for each row execute procedure selectedAcceptedTrig();
+
+
+	
+	
+	
+	
+	
+2-->Stream violation in offer
+	create or replace function streamTrig() returns trigger as $xyz$
+	declare
+		studentStream varchar(20);
+		r record;
+	begin
+		select stream_name into studentStream from (select student_id,stream_name from student where student_id = new.student_id) as r1;
+		for r in select offer_id,stream_name from offer natural join branches_for_offer where offer_id = new.offer_id
+		loop
+			if (r.stream_name = studentStream) then
+				return NEW;
+			end if;
+		end loop;
+		raise exception 'offer is not available to students stream';
+		return null;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger streamTrig before insert on registers_for for each row execute procedure streamTrig();
+
+
+
+
+
+	
+	
+	
+3-->Cannot register if selected for two Jobs
+	create or replace function twoJobsTrig() returns trigger as $xyz$
+	declare
+		studentOffers integer;
+	begin
+		select count(offer_id) into studentOffers from (select * from registers_for where student_id = new.student_id and selected_offer = true) as r1 group by student_id ;
+		if (studentOffers >= 2 ) then
+			raise exception 'Student with 2 or more job offers cannot register.';
+			return null;
+		end if;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger twoJobsTrig before insert or update on registers_for for each row execute procedure twoJobsTrig();
+
+
+
+	
+4-->Already selected for A category
+	create or replace function a_offerTrig() returns trigger as $xyz$
+	declare
+		r record;
+		category varchar(10);
+	begin
+		select category_type into category from 
+		for r in select offer_id,category_type,job_profile,student_id from (select offer_id,company_name,category_type,job_profile from offer join company on company_name = name) as r1 natural join registers_for where (job_profile = 'I + J' or job_profile = 'J') and student_id=new.student_id
+		loop 
+		if (r.category_type = 'A' ) then
+			raise exception 'Student already selected for A category.';
+			return null;
+		end if;
+		end loop;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger a_offerTrig before insert or update on registers_for for each row execute procedure a_offerTrig();
+
+
+5-->DIFFICULT TRIGGER-> PLACED 1.5 PACKAGE
+	create or replace function placedTrig() returns trigger as $xyz$
+	declare
+		flag integer := 0;
+		salary numeric(5,2);
+		r record;
+		category varchar(10);
+	begin
+		select category_type into category from offer join company on company_name = name where offer_id = new.offer_id;
+		if (category = 'Dream') then
+			return new;
+		end if;
+		for r in select * from registers_for where student_id = new.student_id
+		loop 
+		if (r.selected_offer = true ) then
+			flag := 1;
+		end if;
+		end loop;
+
+		if (flag = 1) then
+			select ctc into salary from offer where offer_id = new.offer_id;
+			for r in select offer_id,ctc from registers_for natural join offer where selected_offer = true and (job_profile = 'I + J' or job_profile = 'J') and student_id = new.student_id
+			loop
+				if(r.ctc > 1.5*salary) then
+					raise exception 'old offer of student for which he/she is selected exceeds 1.5 times the ctc of new offer.';
+					return null;
+				end if;
+			end loop;
+		return new;
+		end if;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger placedTrig before insert or update on registers_for for each row execute procedure placedTrig();
+
+
+
+
+
+6-->GOOD TRIGGER >> CANNOT REGISTER FOR i IF ACCEPTED FOR i
+	create or replace function acceptTrig() returns trigger as $xyz$
+	declare
+		flag integer;
+		jobflag integer;
+		r record;
+		offerProfile varchar(5);
+		category varchar(10);
+	begin
+		select category_type into category from offer join company on company_name = name where offer_id = new.offer_id;
+		if (category = 'Dream') then
+			return new;
+		end if;
+
+		select job_profile into offerProfile from offer where offer_id = new.offer_id;
+		if(offerProfile = 'I(2)' or offerProfile = 'I(6)') then
+			flag :=1;
+		end if;
+		if(offerProfile = 'J' or offerProfile = 'I + J') then
+			flag := 2;
+		end if;
+		
+		for r in select job_profile from registers_for natural join offer where accepted_offer = true and student_id = new.student_id
+		loop 
+			if(r.job_profile = 'I(2)' or r.job_profile= 'I(6)') then
+				jobflag :=1;
+			end if;
+			if(r.job_profile= 'J' or r.job_profile= 'I + J') then
+				jobflag := 2;
+			end if;
+			if (flag = jobflag) then
+				raise exception 'Already accepted for that type of job profile';
+				return null;
+			end if;
+		end loop;
+			return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger acceptTrig before insert or update on registers_for for each row execute procedure acceptTrig();
+
+
+
+
+
+
+	
+	
+	
+7-->SPI CRITERIA
+	create or replace function spiCriteriaTrig() returns trigger as $xyz$
+	declare
+		offerSPI numeric(5,2);
+		r record;
+	begin
+		select spi_criteria into offerSPI from offer where offer_id = new.offer_id;
+		for r in select * from student_spi where student_id = new.student_id
+		loop
+			if(r.spi < offerSPI) then
+			raise exception 'Student does not meet SPI criteria';
+			return null;
+			end if;
+		end loop;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger spiCriteriaTrig before insert or update on registers_for for each row execute procedure spiCriteriaTrig();
+	
+
+
+
+
+
+8-->ROUND TRIGGER
+	create or replace function roundTrig() returns trigger as $xyz$
+	declare
+		offerRound integer;
+		offerSPI numeric(5,2);
+		r record;
+	begin
+		if (new.selected_for_round = false) then
+			return new;
+		end if;
+		offerRound = new.round_type - 1;
+		for r in select round_type into offerRound from round where student_id = new.student_id and offer_id = new.offer_id and round_type = offerRound
+		loop
+			if(selected_for_round = false) then
+				raise exception 'Invalid entry';
+				return null;
+			end if;
+		end loop;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger roundTrig before insert or update on round for each row execute procedure roundTrig();
+
+
+
+
+
+
+
+	
+	
+
+9-->Backlog CRITEIA
+	create or replace function backlogCriteriaTrig() returns trigger as $xyz$
+	declare
+		blog integer;
+		studentblog integer;
+		r record;
+	begin
+		select backlog_criteria into blog from offer where offer_id = new.offer_id;
+		select current_backlog into studentblog from student where student_id = new.student_id;
+		if(studentblog > blog) then
+			raise exception 'Student does not meet Backlog criteria';
+			return null;
+		end if;
+		return new;
+	end;
+	$xyz$ language plpgsql;
+
+	create trigger backlogCriteriaTrig before insert or update on registers_for for each row execute procedure backlogCriteriaTrig();
+
+	
+	
+	
+	
+10-->CURRENT BACKLOG CANNOT BE MORE THAN TOTAL
+	CREATE OR REPLACE FUNCTION spc_daiict.backlogtrig()
+	  RETURNS trigger AS
+	$BODY$
+	begin
+		if(new.current_backlog > new.total_backlog) THEN
+			raise exception 'Current Backlog cannot be greater than total backlog.';
+			return null;
+		end if;
+		return NEW;
+	end;
+	$BODY$
+	  LANGUAGE plpgsql
+	  
+	  create trigger backlogTrig before insert or update on STUDENT for each row execute procedure backlogTrig();
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+11--<CPI CRITEIA
+	CREATE OR REPLACE FUNCTION spc_daiict.cpitrig()
+	  RETURNS trigger AS
+	$BODY$
+	declare
+		studentCPI numeric(5,2);
+		desiredCPI numeric(5,2);
+	begin
+		select cpi into studentCPI from student where student_id = NEW.student_id;
+		select cpi_criteria into desiredCPI from offer where offer_id = NEW.offer_id;
+		if(desiredCPI > studentCPI) THEN
+			raise exception 'Student does not meet the CPI criteria.';
+			return null;
+		end if;
+		return NEW;
+	end;
+	$BODY$
+	  LANGUAGE plpgsql
+	  
+	  
+	  	  create trigger cpiTrig before insert or update on registers_for for each row execute procedure cpiTrig();
+		  
+		  
+		  
+		  
+
+		  
+		  
+		  
+12->>CHECK IF SELECTED FOR OFFER THEN RESPECTIVE OFFER'S ALL ROUND SELECTED
+
+CREATE OR REPLACE FUNCTION spc_daiict.selctedroundtrig()
+  RETURNS trigger AS
+$BODY$
+declare
+	r record;
+begin
+	if(new.selected_offer = true) then 
+		for r in select * from round where offer_id = new.offer_id and student_id = new.student_id
+		loop
+			if(r.selected_for_round = false) then
+			raise exception 'Invslid entry';
+			return null;
+			end if;
+		end loop;
+	end if;
+	return new;
+end;
+$BODY$
+  LANGUAGE plpgsql
+		  
+create trigger selctedroundtrig before insert or update on registers_for for each row execute procedure selctedroundTrig();

@@ -1,0 +1,144 @@
+-->AVERAGE PACKAGE
+
+CREATE OR REPLACE FUNCTION spc_daiict.avgpackage()
+  RETURNS double precision AS
+$BODY$
+declare
+	sum float:= 0;
+	count integer:=0;
+	avg numeric(5,2);
+	r record;
+begin	
+	for r in select student_id,ctc from (select * from registers_for where selected_offer = true ) as r1 join offer as r2 on r1.offer_id = r2.offer_id where job_profile = 'I + J' or job_profile='J'
+	loop
+		sum = sum + r.ctc;
+		count = count + 1;
+	end loop;
+	avg = sum/count;
+	return avg;
+end;
+$BODY$
+  LANGUAGE plpgsql
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+-->NUMBER_OF_STUDENTS_UNPLACED
+
+CREATE OR REPLACE FUNCTION spc_daiict.numberofstudentsunplaced(cpivalue double precision)
+  RETURNS integer AS
+$BODY$
+declare
+	countUnSelected integer;
+begin
+	select count(r3.student_id) into countUnSelected from (select distinct student_id from (select * from registers_for natural join (select student_id, cpi from student) as r1 where cpi <= 6 and selected_offer = false) as r2) as r3;
+	return countUnSelected;
+end;
+$BODY$
+  LANGUAGE plpgsql
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  -->PACKAGE_DEVIATION
+  CREATE OR REPLACE FUNCTION spc_daiict.packagedeviation()
+  RETURNS double precision AS
+$BODY$
+declare
+	sum float:= 0;
+	count integer:=0;
+	avg numeric(5,2);
+	deviation numeric(5,2); 
+	r record;
+begin	
+	for r in select student_id,ctc from (select * from registers_for where selected_offer = true ) as r1 join offer as r2 on r1.offer_id = r2.offer_id where job_profile = 'I + J' or job_profile='J'
+	loop
+		sum = sum + r.ctc;
+		count = count + 1;
+	end loop;
+	avg = sum/count;
+	sum := 0;
+	count := 0;
+	for r in select student_id,ctc from (select * from registers_for where selected_offer = true ) as r1 join offer as r2 on r1.offer_id = r2.offer_id where job_profile = 'I + J' or job_profile='J'
+	loop
+		sum = sum + (r.ctc-avg)*(r.ctc-avg);
+		count = count + 1;
+	end loop;
+
+	select sqrt(sum/count) into deviation;
+	
+	return deviation;
+end;
+$BODY$
+  LANGUAGE plpgsql
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  -->PERCENTAGE_PLACED
+  CREATE OR REPLACE FUNCTION spc_daiict.percent(streamname character varying)
+  RETURNS numeric AS
+$BODY$
+declare
+	countSelected integer;
+	total integer;
+	percentage numeric(5,2);
+begin
+	select count(student_id) into countSelected from (select distinct student_id from (select * from (select * from registers_for where selected_offer = true) as r1 natural join (select student_id,stream_name from student) as r2 where stream_name = streamName) as r3) as r4;
+	select count(student_id) into total from (select student_id from student where stream_name = streamName) as r1;
+	percentage = (countSelected*100.00/total);
+	return percentage;
+end;
+$BODY$
+  LANGUAGE plpgsql 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  -->STUDENT_DETAILS_FOR_UNPLACED
+  CREATE OR REPLACE FUNCTION spc_daiict.studentsunplaced(cpivalue double precision)
+  RETURNS SETOF spc_daiict.student AS
+$BODY$
+declare
+	countUnSelected student%rowtype;
+begin
+	for countUnSelected in select * from (select distinct student_id from (select * from registers_for natural join (select student_id, cpi from student) as r1 where cpi <= cpiValue and selected_offer = false) as r2) as r3 natural join student as r4
+	loop
+		return next countUnSelected;
+	end loop;
+	return;
+end;
+$BODY$
+  LANGUAGE plpgsql
+  
+  
+  
+  
+  
+  
+  

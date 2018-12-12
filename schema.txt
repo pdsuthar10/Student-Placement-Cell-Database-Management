@@ -1,0 +1,141 @@
+CREATE SCHEMA spc_daiict;
+SET SEARCH_PATH TO spc_daiict;
+
+CREATE TABLE Stream
+(
+  stream_name VARCHAR(10),
+  PRIMARY KEY (stream_name)
+);
+
+CREATE TABLE Student
+(
+  student_id CHAR(10),
+  DOB DATE NOT NULL,
+  full_name VARCHAR(50) NOT NULL,
+  mother_name VARCHAR(50) NOT NULL,
+  father_name VARCHAR(50) NOT NULL,
+  hsc FLOAT NOT NULL,
+  ssc FLOAT NOT NULL,
+  CPI FLOAT NOT NULL,
+  current_backlog INT,
+  total_backlog INT,
+  mobile_number CHAR(10),
+  current_address VARCHAR(200) NOT NULL,
+  permanent_address VARCHAR(200) NOT NULL,
+  graduation_percentage FLOAT,
+  stream_name VARCHAR(10) NOT NULL,
+  PRIMARY KEY (student_id),
+  FOREIGN KEY (stream_name) REFERENCES Stream(stream_name) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Interest
+(
+  student_id CHAR(10) NOT NULL,
+  domain_of_interest VARCHAR(100) NOT NULL,
+  PRIMARY KEY (student_id,domain_of_interest),
+  FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Location
+(
+  location_name VARCHAR(20),
+  PRIMARY KEY (location_name)
+);
+
+CREATE TABLE Category
+(
+  category_type VARCHAR(20),
+  PRIMARY KEY (category_type)
+);
+
+CREATE TABLE Company
+(
+    name VARCHAR(50) NOT NULL,
+    category_type VARCHAR(20) NOT NULL,
+    details VARCHAR(500) NOT NULL,
+    visit_date DATE NOT NULL,
+    PRIMARY KEY (name),
+    FOREIGN KEY (category_type) REFERENCES Category(category_type) ON DELETE CASCADE ON UPDATE CASCADE
+); 
+
+CREATE TABLE Company_Locations
+(
+    company_name VARCHAR(50) NOT NULL,
+    location_name VARCHAR(20) NOT NULL,
+    PRIMARY KEY (company_name,location_name),
+    FOREIGN KEY (company_name) REFERENCES Company(name) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (location_name) REFERENCES Location(location_name) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE Job_Type
+(
+  job_type VARCHAR(20) NOT NULL,
+  PRIMARY KEY (job_type)
+);
+
+
+CREATE TABLE Offer
+(
+  offer_id CHAR(5) NOT NULL UNIQUE,
+  company_name VARCHAR(50) NOT NULL,
+  job_profile VARCHAR(20) NOT NULL,
+  PPO BOOL NOT NULL,
+  CTC FLOAT NOT NULL,
+  bond BOOL NOT NULL,
+  CPI_criteria FLOAT,
+  SPI_criteria FLOAT,
+  backlog_criteria INTEGER,
+  PRIMARY KEY (offer_id,company_name),
+  FOREIGN KEY (company_name) REFERENCES Company(name) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (job_profile) REFERENCES Job_Type(job_type) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Offer_Locations
+(
+  offer_id CHAR(5) NOT NULL,
+  location_name VARCHAR(20) NOT NULL,
+  PRIMARY KEY (offer_id,location_name),
+  FOREIGN KEY (offer_id) REFERENCES Offer(offer_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (location_name) REFERENCES Location(location_name) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE Student_SPI
+(
+  student_id CHAR(10) NOT NULL,
+  semester INT NOT NULL,
+  SPI FLOAT NOT NULL,
+  PRIMARY KEY (student_id,semester),
+  FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Registers_For
+(
+  student_id CHAR(10) NOT NULL,
+  offer_id CHAR(5) NOT NULL,
+  accepted_offer BOOL NOT NULL,
+  selected_offer BOOL NOT NULL,
+  PRIMARY KEY (student_id,offer_id),
+  FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (offer_id) REFERENCES Offer(offer_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Round
+(
+  student_id CHAR(10) NOT NULL,
+  offer_id CHAR(5) NOT NULL,
+  round_type INTEGER NOT NULL,
+  selected_for_round BOOL NOT NULL,
+  PRIMARY KEY (student_id,offer_id,round_type),
+  FOREIGN KEY (student_id) REFERENCES Student(student_id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (offer_id) REFERENCES Offer(offer_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Branches_For_Offer
+(
+  offer_id CHAR(5) NOT NULL,
+  stream_name VARCHAR(20) NOT NULL,
+  PRIMARY KEY (offer_id,stream_name),
+  FOREIGN KEY (offer_id) REFERENCES Offer(offer_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
